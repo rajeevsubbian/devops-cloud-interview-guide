@@ -1,7 +1,7 @@
-1. Quick Navigation commands - https://github.com/rajeevsubbian/ultimate-linux-guide/blob/main/05-vi-shortcuts/README.md
-2. Book referred - https://dew1-share.percipio.com/cd/rSHnHT3cd 
+## 1. Quick Navigation commands - https://github.com/rajeevsubbian/ultimate-linux-guide/blob/main/05-vi-shortcuts/README.md
+## 2. Book referred - https://dew1-share.percipio.com/cd/rSHnHT3cd 
 
-# 3. Important directories
+## 3. Important directories
 
 /: It is the root directory and everything that runs in your Linux system is below this directory.
 
