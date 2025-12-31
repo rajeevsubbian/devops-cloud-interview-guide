@@ -28,3 +28,26 @@
 /mnt: Here, you can use to mount network shares; your pendrive, SD card, and another kind of external volumes.
 
 These are the most important directories you can find in your Linux system and they will be a part of your daily work.
+
+
+## 4. While creating docker, the steps in reference book (2) is not working. Followed below steps
+
+#### This is because apt is deprecated.
+
+### Create the directory for keyrings if it doesn't exist
+sudo install -m 0755 -d /etc/apt/keyrings
+
+### Download the key and save it to the new location
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+
+### Ensure the system has permission to read the key
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+### Final Installation
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
